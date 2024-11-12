@@ -32,6 +32,6 @@ Route::group(['prefix'=> '', 'middleware'=>[PreventBackHistoryMiddleware::class]
     Route::post('/send-mail', [ContactUsController::class, 'sendMail'])->name('send-mail');
 
     // ===== Comming Soon
-    Route::get('/comming-soon', [HomeController::class, 'commingSoon'])->name('comming-soon');
+    Route::get('/coming-soon', [HomeController::class, 'commingSoon'])->name('comming-soon');
 
 });
