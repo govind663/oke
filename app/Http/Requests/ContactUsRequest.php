@@ -25,7 +25,7 @@ class ContactUsRequest extends FormRequest
             $rule = [
                 'name' => 'required|string|max:255',
                 'email' => 'required|email|string|max:255',
-                'phone' => 'required|numeric',
+                'phone' => 'required|numeric|max:10|phone:IN',
                 'enquiry_id' => 'required|numeric',
                 'message' => 'required|string',
                 'g-recaptcha-response' => 'required|captcha',
@@ -34,7 +34,7 @@ class ContactUsRequest extends FormRequest
             $rule = [
                 'name' => 'required|string|max:255',
                 'email' => 'required|email|string|max:255',
-                'phone' => 'required|numeric',
+                'phone' => 'required|numeric|max:10||phone:IN',
                 'enquiry_id' => 'required|string',
                 'message' => 'required|string',
                 'g-recaptcha-response' => 'required|captcha',
@@ -58,6 +58,8 @@ class ContactUsRequest extends FormRequest
 
             'phone.required' => __('Phone no. is required'),
             'phone.numeric' => __('Please enter a valid phone no..'),
+            'phone.max' => __('The length of phone no. should not exceed 10 characters'),
+            'phone.phone' => __('Please enter a valid phone no..'),
 
             'enquiry_id.required' => __('Enquiry is required'),
             'enquiry_id.numeric' => __('Please enter a valid enquiry id.'),
