@@ -34,7 +34,8 @@ class ContactUsController extends Controller
 
             // Send email
             // Mail::to($recipientEmail)->send(new ContactUsMail($mailData));
-            Mail::to('codingthunder1997@gmail.com')->cc($recipientEmail)->send(new ContactUsMail($mailData));
+            // Mail::to('codingthunder1997@gmail.com')->cc($recipientEmail)->send(new ContactUsMail($mailData));
+            Mail::to($recipientEmail)->cc($request->input('email'))->send(new ContactUsMail($mailData));
 
             return redirect()->route('contact')->with('message', 'Thank you for your interest. We will get back to you within 24 hours.');
         } catch (\Exception $ex) {
