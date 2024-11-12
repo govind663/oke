@@ -237,7 +237,7 @@
                             </div>
 
                             <!-- Captcha Field -->
-                            <div class="col-sm-12 mb-3" style="margin: ">
+                            <div class="col-sm-12 mb-3" style="margin: 20px;">
                                 {!! NoCaptcha::renderJs() !!}
                                 {!! NoCaptcha::display() !!}
                                 @error('g-recaptcha-response')
