@@ -52,8 +52,7 @@ class ContactUsController extends Controller
             case 4: // Battery Manufacturing
                 return 'sales@oke.co.in';
             default:
-                return 'default-email@oke.co.in'; // Add a default email or handle error
+                return 'codingthunder1997@gmail.com'; // Add a default email or handle error
         }
-        // Add more cases as needed for other enquiry_ids
     }
 }
