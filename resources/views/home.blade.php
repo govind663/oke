@@ -136,7 +136,7 @@
                     </div>
                 </div>
                 <div class="text-center-center">
-                    <a href="arvos.html">
+                    <a href="{{ route('arvos') }}">
                         <button class="btn-primary">
                             <span>Read More</span>
                             <span class="btn-primary-inner">
@@ -164,7 +164,7 @@
                     </div>
                 </div>
                 <div class="text-center-center">
-                    <a href="rsb.html">
+                    <a href="{{ route('rsb') }}">
                         <button class="btn-primary">
                             <span>Read More</span>
                             <span class="btn-primary-inner">
@@ -192,7 +192,7 @@
                     </div>
                 </div>
                 <div class="text-center-center">
-                    <a href="coming-soon.html">
+                    <a href="{{ route('comming-soon') }}">
                         <button class="btn-primary">
                             <span>Read More</span>
                             <span class="btn-primary-inner">
@@ -220,7 +220,7 @@
                     </div>
                 </div>
                 <div class="text-center-center">
-                    <a href="coming-soon.html">
+                    <a href="{{ route('comming-soon') }}">
                         <button class="btn-primary">
                             <span>Read More</span>
                             <span class="btn-primary-inner">
