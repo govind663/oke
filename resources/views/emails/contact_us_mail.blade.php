@@ -83,6 +83,21 @@
             <p class="details"><strong>Name:</strong> {{ $mailData['name'] ?? 'N/A' }}</p>
             <p class="details"><strong>Email:</strong> {{ $mailData['email'] ?? 'N/A' }}</p>
             <p class="details"><strong>Phone No :</strong> {{ $mailData['phone'] ?? 'N/A' }}</p>
+            {{-- Enquiry Type --}}
+            @php
+                $enquiry_type = '';
+
+                if ($mailData['enquiry_type'] == '1') {
+                    $enquiry_type = 'Arvos';
+                } elseif ($mailData['enquiry_type'] == '2') {
+                    $enquiry_type = 'RSB';
+                } elseif ($mailData['enquiry_type'] == '3') {
+                    $enquiry_type = 'Catalyst';
+                } elseif ($mailData['enquiry_type'] == '4') {
+                    $enquiry_type = 'Other';
+                }
+            @endphp
+            <p class="details"><strong>Enquiry Type:</strong> {{ $enquiry_type ?? 'N/A' }}</p>
             <p class="details"><strong>Message:</strong> {{ $mailData['message'] ?? 'N/A' }}</p>
 
 
