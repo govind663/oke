@@ -124,17 +124,12 @@
                                     <p class="contact-one_info_text">Send email</p>
                                     <p class="contact-one_info_title">
                                         <b>Arvos, RSB, Catalyst - </b>
-                                        <a
-                                            href="/cdn-cgi/l/email-protection#bac9d2dbd3d6dfc9d294d8dbdedffad5d1df94d9d594d3d4"><span
-                                                class="__cf_email__"
-                                                data-cfemail="790a111810151c0a11571b181d1c3916121c571a16571017">[email&#160;protected]</span></a>
+                                        <a href="mailto:shailesh.bade@oke.co.in"><i class="fa fa-envelope"></i>shailesh.bade@oke.co.in</a>
                                     </p>
                                     <hr>
                                     <p class="contact-one_info_title">
                                         <b>Battery Manufacturing -</b>
-                                        <a href="/cdn-cgi/l/email-protection#790a18151c0a3916121c571a16571017"><span
-                                                class="__cf_email__"
-                                                data-cfemail="96e5f7faf3e5d6f9fdf3b8f5f9b8fff8">[email&#160;protected]</span></a>
+                                        <a href="mailto:shailesh.bade@arvosindia.com"><i class="fa fa-envelope"></i>sales@oke.co.in</a>
                                     </p>
                                 </div>
                             </li>
