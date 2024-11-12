@@ -63,7 +63,7 @@
                         <img src="{{ asset('assets/images/home/coming-soon.png') }}" class="img-responsive">
                     </div>
                     <div class="comin-sec-btn">
-                        <a href="index.html">
+                        <a href="{{ route('home') }}">
                             <button class="btn-primary btn-grey text-center-center margin-auto">
                                 <span>Back to Home</span>
                                 <span class="btn-primary-inner">
