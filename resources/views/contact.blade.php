@@ -278,9 +278,11 @@
                         <ul class="contact-info-list">
                             <h3>For Arvos, RSB, Catalyst</h3>
                             <li><i class="fa fa-user"></i> Shailesh Bade</li>
-                            <li><a href="/cdn-cgi/l/email-protection#c5b6ada4aca9a0b6adeba7a4a1a085aaaea0eba6aaebacab"><i
-                                        class="fa fa-envelope"></i><span class="__cf_email__"
-                                        data-cfemail="5c2f343d3530392f34723e3d38391c333739723f33723532">[email&#160;protected]</span></a>
+                            <li>
+                                <a href="mailto:shailesh.bade@oke.co.in">
+                                    <i class="fa fa-envelope"></i>&NonBreakingSpace;
+                                    shailesh.bade@oke.co.in
+                                </a>
                             </li>
                             <li><a href="tel:+91 81088 70099"><i class="fa fa-phone"></i> +91 81088 70099</a></li>
                         </ul>
@@ -291,10 +293,10 @@
                         <ul class="contact-info-list">
                             <h3>For Battery Manufacturing</h3>
                             <li><i class="fa fa-user"></i> Mukesh Rane</li>
-                            <li><a
-                                    href="/cdn-cgi/l/email-protection#7e0d161f17121b0d16501c1f1a1b3e1f0c08110d17101a171f501d1113"><i
-                                        class="fa fa-envelope"></i><span class="__cf_email__"
-                                        data-cfemail="8efdefe2ebfdcee1e5eba0ede1a0e7e0">[email&#160;protected]</span>
+                            <li>
+                                <a href="mailto:shailesh.bade@arvosindia.com">
+                                    <i class="fa fa-envelope"></i>&NonBreakingSpace;
+                                    sales@oke.co.in
                                 </a>
                             </li>
                             <li><a href="tel:+91 12345 67890"><i class="fa fa-phone"></i>+91 86557 80031 </a></li>
