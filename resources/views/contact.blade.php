@@ -124,12 +124,18 @@
                                     <p class="contact-one_info_text">Send email</p>
                                     <p class="contact-one_info_title">
                                         <b>Arvos, RSB, Catalyst - </b>
-                                        <a href="mailto:shailesh.bade@oke.co.in"><i class="fa fa-envelope"></i>shailesh.bade@oke.co.in</a>
+                                        <a href="mailto:shailesh.bade@oke.co.in">
+                                            <i class="fa fa-envelope"></i>&NonBreakingSpace;
+                                            shailesh.bade@oke.co.in
+                                        </a>
                                     </p>
                                     <hr>
                                     <p class="contact-one_info_title">
                                         <b>Battery Manufacturing -</b>
-                                        <a href="mailto:shailesh.bade@arvosindia.com"><i class="fa fa-envelope"></i>sales@oke.co.in</a>
+                                        <a href="mailto:shailesh.bade@arvosindia.com">
+                                            <i class="fa fa-envelope"></i>&NonBreakingSpace;
+                                            sales@oke.co.in
+                                        </a>
                                     </p>
                                 </div>
                             </li>
