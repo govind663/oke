@@ -163,7 +163,7 @@
                         <div class="row">
                             <!-- Name Field -->
                             <div class="form-group col-md-6">
-                                <label>Name</label>
+                                <label>Name : <span class="text-light">*</span></label>
                                 <input type="text" id="name" name="name" class="form-control @error('name') is-invalid @enderror" value="{{ old('name') }}" placeholder="Enter Name">
                                 @error('name')
                                 <span class="invalid-feedback" role="alert">
@@ -174,7 +174,7 @@
 
                             <!-- Email Field -->
                             <div class="form-group col-md-6">
-                                <label>Email ID</label>
+                                <label>Email ID : <span class="text-light">*</span></label>
                                 <input type="email" id="email" name="email" class="form-control @error('email') is-invalid @enderror" value="{{ old('email') }}" placeholder="Enter Email Id">
                                 @error('email')
                                 <span class="invalid-feedback" role="alert">
@@ -185,7 +185,7 @@
 
                             <!-- Phone Number Field -->
                             <div class="form-group col-md-6">
-                                <label>Phone No</label>
+                                <label>Phone No : <span class="text-light">*</span></label>
                                 <input type="text" id="phone" name="phone" class="form-control @error('phone') is-invalid @enderror" value="{{ old('phone') }}" maxlength="10" onkeypress='return event.charCode >= 48 && event.charCode <= 57' placeholder="Enter Mobile No">
                                 @error('phone')
                                 <span class="invalid-feedback" role="alert">
@@ -196,7 +196,7 @@
 
                             <!-- Enquiry Dropdown -->
                             <div class="form-group col-md-6">
-                                <label>Enquiry</label>
+                                <label>Enquiry : <span class="text-light">*</span></label>
                                 <select class="form-control @error('enquiry_id') is-invalid @enderror" id="enquiry_id" name="enquiry_id">
                                     <option value="">Select Enquiry</option>
                                     <option value="1" {{ old('enquiry_id')=='1' ? 'selected' : '' }}>Arvos</option>
@@ -213,7 +213,7 @@
 
                             <!-- Message Field -->
                             <div class="form-group col-md-12">
-                                <label>Message</label>
+                                <label>Message : <span class="text-light">*</span></label>
                                 <textarea id="message" name="message" class="form-control message-box-sec @error('message') is-invalid @enderror" rows="5" cols="5" value="{{ old('message') }}" placeholder="Enter Message">{{ old('message') }}</textarea>
                                 @error('message')
                                 <span class="invalid-feedback" role="alert">
