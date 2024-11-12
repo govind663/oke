@@ -39,6 +39,10 @@
             font-weight: 400px;
             margin-left: 20px;
         }
+
+        .message-box-sec {
+            padding: 30px 22px !important;
+        }
     </style>
 </head>
 
