@@ -151,8 +151,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-8 col-md-offset-2">
-                    <form id="contactForm" method="POST" action="{{ route('send-mail') }}"
-                        enctype="multipart/form-data" enctype="multipart/form-data" autocomplete="off">
+                    <form id="contactForm" method="POST" action="{{ route('send-mail') }}" enctype="multipart/form-data" enctype="multipart/form-data" autocomplete="off">
                         @csrf
 
                         <div class="heading white-heading">
@@ -164,75 +163,61 @@
                             <!-- Name Field -->
                             <div class="form-group col-md-6">
                                 <label>Name</label>
-                                <input type="text" id="name" name="name"
-                                    class="form-control @error('name') is-invalid @enderror"
-                                    value="{{ old('name') }}" placeholder="Enter Name">
+                                <input type="text" id="name" name="name" class="form-control @error('name') is-invalid @enderror" value="{{ old('name') }}" placeholder="Enter Name">
                                 @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
                                 @enderror
                             </div>
 
                             <!-- Email Field -->
                             <div class="form-group col-md-6">
                                 <label>Email ID</label>
-                                <input type="email" id="email" name="email"
-                                    class="form-control @error('email') is-invalid @enderror"
-                                    value="{{ old('email') }}" placeholder="Enter Email Id">
+                                <input type="email" id="email" name="email" class="form-control @error('email') is-invalid @enderror" value="{{ old('email') }}" placeholder="Enter Email Id">
                                 @error('email')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
                                 @enderror
                             </div>
 
                             <!-- Phone Number Field -->
                             <div class="form-group col-md-6">
                                 <label>Phone No</label>
-                                <input type="text" id="phone" name="phone"
-                                    class="form-control @error('phone') is-invalid @enderror"
-                                    value="{{ old('phone') }}" maxlength="10"
-                                    onkeypress='return event.charCode >= 48 && event.charCode <= 57'
-                                    placeholder="Enter Mobile No">
+                                <input type="text" id="phone" name="phone" class="form-control @error('phone') is-invalid @enderror" value="{{ old('phone') }}" maxlength="10" onkeypress='return event.charCode >= 48 && event.charCode <= 57' placeholder="Enter Mobile No">
                                 @error('phone')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
                                 @enderror
                             </div>
 
                             <!-- Enquiry Dropdown -->
                             <div class="form-group col-md-6">
                                 <label>Enquiry</label>
-                                <select class="form-control @error('enquiry_id') is-invalid @enderror" id="enquiry_id"
-                                    name="enquiry_id">
+                                <select class="form-control @error('enquiry_id') is-invalid @enderror" id="enquiry_id" name="enquiry_id">
                                     <option value="">Select Enquiry</option>
-                                    <option value="1" {{ old('enquiry_id') == '1' ? 'selected' : '' }}>Arvos
-                                    </option>
-                                    <option value="2" {{ old('enquiry_id') == '2' ? 'selected' : '' }}>RSB
-                                    </option>
-                                    <option value="3" {{ old('enquiry_id') == '3' ? 'selected' : '' }}>Catalyst
-                                    </option>
-                                    <option value="4" {{ old('enquiry_id') == '4' ? 'selected' : '' }}>Battery
-                                        Manufacturing</option>
+                                    <option value="1" {{ old('enquiry_id')=='1' ? 'selected' : '' }}>Arvos</option>
+                                    <option value="2" {{ old('enquiry_id')=='2' ? 'selected' : '' }}>RSB</option>
+                                    <option value="3" {{ old('enquiry_id')=='3' ? 'selected' : '' }}>Catalyst</option>
+                                    <option value="4" {{ old('enquiry_id')=='4' ? 'selected' : '' }}>Battery Manufacturing</option>
                                 </select>
                                 @error('enquiry_id')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
                                 @enderror
                             </div>
 
                             <!-- Message Field -->
                             <div class="form-group col-md-12">
                                 <label>Message</label>
-                                <textarea id="message" name="message" class="form-control message-box-sec @error('message') is-invalid @enderror"
-                                    rows="5" cols="5" value="{{ old('message') }}" placeholder="Enter Message">{{ old('message') }}</textarea>
+                                <textarea id="message" name="message" class="form-control message-box-sec @error('message') is-invalid @enderror" rows="5" cols="5" value="{{ old('message') }}" placeholder="Enter Message">{{ old('message') }}</textarea>
                                 @error('message')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
                                 @enderror
                             </div>
 
@@ -446,6 +431,24 @@
             }
             toastr.warning("{{ session('warning') }}");
         @endif
+    </script>
+
+    <script>
+        // For Name Validation
+        $('#name').keypress(function (e) {
+            // accept only alphabets and space
+            var regex = new RegExp("^[a-zA-Z \s]+$");
+            var str = String.fromCharCode(!e.charCode ? e.which : e.charCode);
+            if (regex.test(str)) {
+                return true;
+            }
+            else
+            {
+                e.preventDefault();
+                alert('Please Enter Alphabate');
+                return false;
+            }
+        });
     </script>
 
 </body>
