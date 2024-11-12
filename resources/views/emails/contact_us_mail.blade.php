@@ -78,23 +78,25 @@
         <div class="contact">
             <img src="{{ $message->embed(public_path('assets/images/home/logo.png')) }}" alt="OKE_Logo" class="logo">
 
-            <h2>Contact Us Details:</h2>
+            <h2>Contact Us Details :- </h2>
 
             <p class="details"><strong>Name:</strong> {{ $mailData['name'] ?? 'N/A' }}</p>
             <p class="details"><strong>Email:</strong> {{ $mailData['email'] ?? 'N/A' }}</p>
-            <p class="details"><strong>Phone No:</strong> {{ $mailData['phone'] ?? 'N/A' }}</p>
-            <p class="details"><strong>Enquiry Type:</strong> {{ $mailData['enquiry_type'] ?? 'N/A' }}</p>
+            <p class="details"><strong>Phone No :</strong> {{ $mailData['phone'] ?? 'N/A' }}</p>
             <p class="details"><strong>Message:</strong> {{ $mailData['message'] ?? 'N/A' }}</p>
 
-            <p>Thank you for reaching out to us. We will respond to your inquiry as soon as possible.</p>
-        </div>
 
-        <!-- Footer Section -->
-        <div class="footer">
-            <p style="font-size: 12px; color: #666;">
-                Copyright © {{ date('Y') }}
-                <a href="{{ route('home') }}" target="_blank">OKE</a>. All Rights Reserved.
+            <p>
+                Thank you for reaching out to us. We will respond to your inquiry as soon as possible.
             </p>
+            <!-- Footer Section -->
+            <div class="footer">
+                <p style="font-size: 12px;color: #666;">
+                    Copyright © {{ date('Y') }}
+                    <a href="{{ route('home') }}" target="_blank">OKE</a>.
+                    All Rights Reserved.
+                </p>
+            </div>
         </div>
     </div>
 </body>

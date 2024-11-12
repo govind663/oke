@@ -27,7 +27,6 @@ class ContactUsController extends Controller
                 'phone' => $request->input('phone'),
                 'enquiry_id' => $request->input('enquiry_id'),
                 'message' => $request->input('message'),
-                'enquiry_type' => $this->getEnquiryType($request->input('enquiry_id')),
             ];
 
             // Determine the email based on enquiry_id
@@ -35,7 +34,7 @@ class ContactUsController extends Controller
 
             // Send email
             // Mail::to($recipientEmail)->send(new ContactUsMail($mailData));
-            Mail::to($recipientEmail)->cc($request->input('email'))->send(new ContactUsMail($mailData));
+            Mail::to('codingthunder1997@gmail.com')->cc($recipientEmail)->send(new ContactUsMail($mailData));
 
             return redirect()->route('contact')->with('message', 'Thank you for your interest. We will get back to you within 24 hours.');
         } catch (\Exception $ex) {
@@ -56,18 +55,5 @@ class ContactUsController extends Controller
             default:
                 return 'codingthunder1997@gmail.com'; // Add a default email or handle error
         }
-    }
-
-    private function getEnquiryType($enquiryId)
-    {
-        $enquiryTypes = [
-            1 => 'Arvos',
-            2 => 'RSB',
-            3 => 'Catalyst',
-            4 => 'Battery Manufacturing',
-            5 => 'Other',
-        ];
-
-        return $enquiryTypes[$enquiryId] ?? 'N/A';
     }
 }
