@@ -87,14 +87,14 @@
             @php
                 $enquiry_type = '';
 
-                if ($mailData['enquiry_type'] == '1') {
+                if ($mailData['enquiry_id'] == '1') {
                     $enquiry_type = 'Arvos';
-                } elseif ($mailData['enquiry_type'] == '2') {
+                } elseif ($mailData['enquiry_id'] == '2') {
                     $enquiry_type = 'RSB';
-                } elseif ($mailData['enquiry_type'] == '3') {
+                } elseif ($mailData['enquiry_id'] == '3') {
                     $enquiry_type = 'Catalyst';
-                } elseif ($mailData['enquiry_type'] == '4') {
-                    $enquiry_type = 'Other';
+                } elseif ($mailData['enquiry_id'] == '4') {
+                    $enquiry_type = 'Battery Manufacturing';
                 }
             @endphp
             <p class="details"><strong>Enquiry Type:</strong> {{ $enquiry_type ?? 'N/A' }}</p>
