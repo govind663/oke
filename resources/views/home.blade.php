@@ -106,7 +106,7 @@
                                         <a href="#section5">
                                             <div class="single-box">
                                                 <p>04</p>
-                                                <img src="images/home/logo.png" class="img-responsive">
+                                                <img src="{{ asset('assets/images/home/logo.png') }}" class="img-responsive">
                                                 <h2>Battery</h2>
                                                 <h6>Lithium Ion Battery Storage</h6>
                                             </div>
